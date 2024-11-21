@@ -12,7 +12,7 @@ Implementing Quivr to parse documents and use it as a chat bot to answer questio
 * Install Quivr and other required dependencies. You might get errors regarding the missing dependencies. Install them and you will be good to go.
     * pip install quivr-core
 * Run the below command with openAPI key in the terminal
-    * export OPENAI_API_KEY=''
+    * export OPENAI_API_KEY='<Open ai api key>'
 * Run the below command to make the script work.
     * python test_quivr.py
 If you get any errors related to dependencies missing, go ahead and install them.
