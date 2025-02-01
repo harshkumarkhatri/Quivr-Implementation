@@ -103,7 +103,7 @@ class RepositoryProcessor:
         self.brain_name = brain_name
         self.brain = None
         self.storage = BrainStorageDB(Path.home() / ".quivr" / "brain_storage.db")
-        self.supported_extensions = {'.txt'}
+        self.supported_extensions = {'.pdf','.docx','.txt'}
         self.setup_logging()
         self.setup_nltk()
 
@@ -128,7 +128,7 @@ class RepositoryProcessor:
                 return all_files
 
             for file in os.listdir(policies_path):
-                if file.endswith('.txt'):
+                if file.endswith(('.txt', '.pdf', '.docx')):
                     all_files.append(os.path.join(policies_path, file))
 
         except Exception as e:
